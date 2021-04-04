@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Now building dockercrawler binary with go build"
+go build -o bin/dockercrawler
+
+cd pkg/mockWorker
+
+echo "Now building mockworker container with docker build"
+docker build . -t cole-ratner/mockworker
